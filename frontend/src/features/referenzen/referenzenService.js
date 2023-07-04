@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = `${window.location.origin}/api/referenzen/`;
+const API_URL = 'https://weak-erin-dolphin-robe.cyclic.app/api/referenzen/';
 
 const createReferenzen = async (referenzenData, token)=>{
     const config ={
