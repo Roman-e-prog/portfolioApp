@@ -1,0 +1,51 @@
+@import '../../../app.scss';
+
+.berufsstationen-e-container{
+    width:100%;
+    min-height:400px;
+    padding-bottom:10px;
+
+    & .title-holder{
+        width:100%;
+    }
+    & .berufsstationen-formWrapper{
+        width:100%;
+        padding:20px;
+
+        & form{
+            width:100%;
+            padding:20px;
+            .berufsstationen-formGroup{
+                width:100%;
+                display:flex;
+                flex-direction:column;
+            
+                & label{
+                    color:map-get($light-colors, primary);
+                    margin-bottom:5px;
+                }
+                & input{
+                    width:80%;
+                    padding:5px;
+                }
+            }
+            & #submit-btn{
+                margin-top:5px;
+                padding:5px;
+                background: map-get($dark-colors, secondary);
+                color: map-get($light-colors, primary);
+                border:none;
+                cursor:pointer;
+            }
+    }
+}
+
+    & #navigate-btn{
+        margin: 5px 25px;
+        padding:10px;
+        background: map-get($dark-colors, tertiary);
+        color: map-get($light-colors, primary);
+        border:none;
+        cursor:pointer;
+    }
+}

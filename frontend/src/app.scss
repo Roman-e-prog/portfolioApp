@@ -1,0 +1,59 @@
+.App{
+  overflow: hidden;
+}
+$dark-colors: (
+  primary: #333333,
+  secondary: #444444,
+  tertiary: #555555,
+  quaternary: #666666
+);
+$light-colors: (
+  primary: #ffffff,
+  secondary: #f0f0f0,
+  tertiary: #e0e0e0,
+  quaternary: #d0d0d0
+);
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: map-get($dark-colors, primary);
+}
+@mixin flex($position: flex-start, $direction:row){
+  display:flex;
+  align-items: center;
+  justify-content: $position;
+  flex-direction: $direction;
+}
+
+.link{
+    text-decoration:none;
+    color: map-get($light-colors, primary);
+}
+.bold{
+  font-weight: 600;
+}
+.error{
+  color:red;
+}
+@mixin readme{
+  width:100%;
+  padding:20px 0;
+  font-size:16px;
+  border:1px solid map-get($light-colors, primary);
+  color: map-get($light-colors, primary);
+  white-space: pre-wrap;
+}
+@mixin mobile{
+  @media screen and (max-width:420px)
+  {@content;}
+}
+@mixin tablet{
+  @media screen and (max-width:780px)
+  {@content;}
+}
+@mixin large{
+  @media screen and (max-width:1024px)
+  {@content;}
+}

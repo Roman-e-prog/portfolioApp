@@ -1,0 +1,58 @@
+@import '../../app.scss';
+
+.lebenslauf-container{
+    width:100%;
+}
+.lebenslauf-title{
+    width:100%;
+    margin-top:10px 0;
+    padding-left:20px;
+    display:flex;
+    align-items: center;
+
+    & h1{
+        color:map-get($light-colors, primary);
+    }
+}
+.timeline{
+    width:100%;
+    padding:20px;
+}
+.lebenslauf-fieldWrapper{
+    width:100%;
+    display:flex;
+}
+.date{
+    display:flex;
+    width:20%;
+    align-items: center;
+    color:map-get($light-colors, primary);
+    margin-right:10px;
+    @include mobile{
+        display:none;
+    }
+}
+.station-wrapper{
+    display:flex;
+    flex-direction: column;
+    padding-left:10px;
+    margin-bottom:10px;
+    border-left: 1px solid map-get($light-colors, primary);
+    word-wrap: break-word;
+    white-space:pre-wrap;
+}
+.station{
+    font-weight:bold;
+    margin-bottom: 10px;
+    color:map-get($light-colors, primary);
+    @include mobile{
+        font-size:13px;
+        font-weight:400;
+    }
+}
+.station-beschreibung{
+    color:map-get($light-colors, primary);
+    @include mobile{
+        font-size:12px;
+    }
+}

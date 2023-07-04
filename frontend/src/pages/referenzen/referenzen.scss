@@ -1,0 +1,65 @@
+@import '../../app.scss';
+
+.referenzen-container{
+    width:100%;
+}
+.referenzen-a-title{
+    width:100%;
+    display: flex;
+    align-items: center;
+
+    & h1{
+        padding-left:20px;
+        color:map-get($light-colors, primary)
+    }
+}
+.referenzenFieldWrapper{
+    width:80%;
+    margin:0 auto;
+}
+.referenzen-projectTitle{
+    @include readme;
+    padding:5px;
+   
+}
+.referenzen-projectPurpose{
+    @include readme;
+    padding:5px;
+}
+.referenzen-projectDescription{
+    @include readme; 
+    padding:5px;
+}
+.referenzen-generalInformation{
+    @include readme;
+    padding:5px;
+}
+.referenzen-structureList{
+    @include readme;
+    padding:5px;
+}
+.referenzen-githubLink{
+    @include readme;
+    padding:5px;
+    & a{
+        color: map-get($light-colors, primary);
+    } 
+}
+.screenshotTitle{
+    color:map-get($light-colors, primary)
+}
+.screenshotFieldWrapper{
+    width:100%;
+    & span{
+        width:100%;
+        & img{
+            width:100%;
+            max-width: 100%;
+            height:auto;
+        }
+        & .non-responsive {
+            width: auto;
+            height: auto;
+          }
+    }
+}

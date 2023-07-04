@@ -1,0 +1,14 @@
+@import '../../app.scss';
+.homePage{
+    width:100%;
+    height:100vh;
+    @include flex($direction:column);
+}
+.contentWrapper{
+    @include flex();
+    width:100%;
+    height:85vh;
+    @include mobile{
+        flex-direction: column;
+    }
+}

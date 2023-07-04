@@ -1,0 +1,47 @@
+@import '../../../app.scss';
+
+.ueberMich-e-container{
+    width:100%;
+
+    & .title-holder{
+        width:100%;
+    }
+    & .ueberMich-e-formWrapper{
+        width: 100%;
+        padding:20px;
+        & form{
+            width:100%;
+            padding:20px;
+            
+            & .ueberMich-formGroup{
+                width:100%;
+                display:flex;
+                flex-direction:column;
+                & label{
+                    color: map-get($light-colors, primary);
+                    margin-bottom:5px;
+                }
+                & #ueberMich-textarea{
+                    width:50%;
+                    min-height:300px;
+                }
+            }
+            & #submit-btn{
+                margin-top:5px;
+                padding:5px;
+                background: map-get($dark-colors, secondary);
+                color: map-get($light-colors, primary);
+                border:none;
+                cursor:pointer;
+            }
+        }
+    }
+    & #navigate-btn{
+        margin: 5px 25px;
+        padding:10px;
+        background: map-get($dark-colors, tertiary);
+        color: map-get($light-colors, primary);
+        border:none;
+        cursor:pointer;
+    }
+}

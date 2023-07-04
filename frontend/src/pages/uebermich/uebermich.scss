@@ -1,0 +1,49 @@
+@import '../../app.scss';
+
+#ueberMich-ausgabe-container{
+    width:100%;
+    overflow:hidden;
+}
+.ueberMich-a-contentWrapper{
+    width:100%;
+    margin-top: 10px;
+    display:flex;
+    @include mobile{
+        flex-direction:column;
+    }
+}
+#ueberMich-b-contentWrapper{
+    width:30%;
+    display:flex;
+    flex-direction:column;
+    @include mobile{
+        width:100%;
+    }
+}
+.imageWrapper{
+    width:80%;
+    margin: 0 auto;
+    & img{
+        width:100%;
+    }
+}
+.contactWrapper{
+    width:80%;
+    margin: 0 auto;
+}
+#contentData{
+    width:70%;
+    @include mobile{
+        width:100%;
+    }
+    .anschreiben{
+        width:100%;
+
+        & span{
+            color:map-get($light-colors, primary);
+            white-space: pre-wrap;
+        }
+    }
+
+}
+

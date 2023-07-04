@@ -1,0 +1,82 @@
+@import '../../app.scss';
+.mobileNav-container{
+    width:100%;
+    height:15vh;
+}
+.mobileNav{
+    background-color: map-get($dark-colors , secondary );
+    width:100%;
+    height:100%;
+    position: sticky;
+    z-index: 200;
+    top:0;
+    @include flex($direction:column);
+}
+.mobileName{
+    width:100%;
+    height:40%;
+    @include flex();
+
+    & span{
+        font-size:18px;
+        margin-left:15px;
+        color: map-get($light-colors, primary )
+    }
+}
+.mobileBorder{
+    width: 98%;
+    margin:0 auto;
+    height:1px;
+    background-color: map-get($light-colors , primary );
+}
+.mobileMenue{
+    @include flex($direction:column);
+    align-items:flex-start;
+    width:100%;
+    height:100%;
+}
+#hamburger{
+    color:map-get($light-colors, primary);
+    font-size:36px;
+    margin-left:15px;
+}
+.hamburgermenue{
+    width:100%;
+    position: relative;
+}
+.dropdown{
+    width:100%;
+    position:absolute;
+    top:5.5vh;
+    left:0;
+    z-index:10;
+    background:map-get($dark-colors, secondary);
+    & .mobileLinkListe{
+        width:100%;
+        list-style:none;
+        display:flex;
+        flex-direction:column;
+        justify-content: flex-start;
+        margin:0;
+        padding:0;
+
+        & li{
+            width:100%;
+            padding:5px;
+            border-bottom: 1px solid map-get($light-colors, primary);
+
+            &:last-of-type{
+                border:none;
+            }
+
+            & .link{
+                width:100%;
+                color: map-get($light-colors, primary);
+                cursor:pointer;
+            }
+            & .link:hover{
+                color:blue;
+            }
+        }
+    }
+}

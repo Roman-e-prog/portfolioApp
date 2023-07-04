@@ -1,0 +1,70 @@
+@import '../../app.scss';
+.sprachen-container{
+    width:100%;
+}
+.sprachen-sub-container{
+    width:100%;
+    margin-top:10px;
+}
+.sprachen-title{
+    width:100%;
+    display:flex;
+    align-items: center;
+
+    & h2{
+        margin-left:20px;
+        color:map-get($light-colors, primary)
+    }
+}
+.sprachen-field-container, .formWrapper{
+    margin-top:10px;
+    width:80%;
+    margin:0 auto;
+}
+.sprachen-fieldWrapper{
+    width:100%;
+    display:flex;
+    align-items:center;
+}
+.sprachen-box, .star-box{
+    width:50%;
+    height:30px;
+    padding-left:5px;
+    border: 1px solid map-get($light-colors, primary);
+    color:map-get($light-colors, primary);
+    font-size:20px;
+    display:flex;
+    align-items:center;
+}
+.formWrapper{
+    width:100%;
+    margin-top:20px;
+}
+#sprachenForm{
+    width:100%;
+    display:flex;
+    align-items:center;
+}
+.sprachen-formGroup{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    border: 1px solid map-get($light-colors, primary);
+    color:map-get($light-colors, primary);
+    & label{
+        display:none;
+    }
+    & input{
+        height:40px;
+    }
+}
+.stars{
+    width:30%;
+    height:30px;
+    display:flex;
+    align-items:center;
+    font-size:16px;
+    border: 1px solid map-get($light-colors, primary);
+    color:map-get($light-colors, primary);
+    padding:10px;
+}

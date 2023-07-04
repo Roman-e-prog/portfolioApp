@@ -1,0 +1,78 @@
+@import '../../app.scss';
+
+.referenzen-d-container{
+    width:100%;
+    min-height:400px;
+    padding-bottom:10px;
+}
+#referenzen-form{
+    width:80%;
+    height:80%;
+    margin: 0 auto;
+    padding:10px;
+    .formGroup-referenzen{
+        display:flex;
+        flex-direction:column;
+    
+        & label{
+            font-size:18px;
+            color:map-get($light-colors, primary);
+            margin-bottom:5px;
+        }
+        & .referenzen-input{
+            width:80%;
+            padding:5px;
+        }
+    }
+    & button{
+        margin-top:10px;
+        padding:5px;
+        background:map-get($dark-colors, secondary);
+        color:map-get($light-colors, primary);
+        border:none;
+        cursor:pointer;
+    }
+}
+//Anzeige der Daten
+.referenzen-content{
+    width:80%;
+    margin:10px auto;
+}
+.referenzen-fieldWrapper{
+    width:100%;
+    @include flex($direction:column);
+    border:1px solid map-get($light-colors, primary);
+    color: map-get($light-colors, primary);
+
+    & .icons{
+        font-size:26px;
+        margin-right:5px;
+    }
+}
+.referenzen-title{
+    @include readme;
+    @include flex($direction:column);
+   
+}
+.referenzen-purpose{
+    @include readme;
+    @include flex($direction:column);  
+}
+.referenzen-description{
+    @include readme;
+    @include flex($direction:column);  
+}
+.generalInformation{
+    @include readme;
+    @include flex($direction:column);
+}
+.structureList{
+    @include readme;
+}
+.github-link{
+    @include readme;
+
+    & span{
+        margin-left:15px;
+    }
+}

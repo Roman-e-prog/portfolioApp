@@ -1,0 +1,63 @@
+@import '../../app.scss';
+
+.berufsstationen-d-container{
+    width:100%;
+    min-height:400px;
+    padding-bottom:10px;
+}
+#berufsstationen-form{
+    width:80%;
+    height:80%;
+    margin: 0 auto;
+    padding:10px;
+    .formGroup-berufsstationen{
+        display:flex;
+        flex-direction:column;
+    
+        & label{
+            font-size:18px;
+            color:map-get($light-colors, primary);
+            margin-bottom:5px;
+        }
+        & .berufsstationen-input{
+            width:80%;
+            padding:5px;
+        }
+    }
+    & button{
+        margin-top:10px;
+        padding:5px;
+        background:map-get($dark-colors, secondary);
+        color:map-get($light-colors, primary);
+        border:none;
+        cursor:pointer;
+    }
+}
+.content-berufsstationen{
+    display:flex;
+    flex-direction:column;
+}
+.fieldWrapper-berufsstationen{
+    @include flex($position:space-around);
+    width:100%;
+    margin:5px;
+    color: map-get($light-colors, primary);
+}
+.datumWrapper{
+    @include flex();
+    width:15%;
+}
+.workWrapper{
+    width:70%;
+    @include flex($direction:column);
+    word-wrap: break-word;
+    white-space:pre-wrap;
+}
+.buttonWrapper{
+    @include flex();
+    width:15%;
+    & .icons{
+        font-size:26px;
+        margin-right:5px
+    }
+}
