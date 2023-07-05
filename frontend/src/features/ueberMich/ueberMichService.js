@@ -1,6 +1,6 @@
 import axios from 'axios';
+const API_URL = `${window.location.origin}/api/ueberMich/`;
 
-const API_URL = 'https://romanarminrostockportfolio.cyclic.app/api/ueberMich/';
 
 const createUeberMich = async (ueberMichData, token)=>{
     const config ={

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL =  'https://romanarminrostockportfolio.cyclic.app/api/sprachen/';
+const API_URL =  `${window.location.origin}/api/sprachen/`;
 
 const createSprachen = async (sprachenData, token)=>{
     const config ={

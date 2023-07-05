@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = 'https://romanarminrostockportfolio.cyclic.app/api/auth/';
+const API_URL = `${window.location.origin}/api/auth/`;
 
 const register = async (userData)=>{
     const response = await axios.post(API_URL + "register", userData);
