@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = `${window.location.origin}/api/berufsstationen/`;
+const API_URL = 'https://romanarminrostockportfolio.cyclic.app/api/berufsstationen/';
 
 const createBerufsstationen = async (berufsstationenData, token)=>{
     const config ={
