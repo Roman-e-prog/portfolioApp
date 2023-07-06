@@ -4,7 +4,7 @@ dotenv.config();
 const cors = require('cors');
 const connectDb = require('./config/db');
 const errorHandler = require('./middleware/errorHandler');
-const port = process.env.Port;
+const port = process.env.PORT;
 const authRoute = require('./routes/auth');
 const berufsstationenRoute = require('./routes/berufsstationen');
 const referenzenRoute = require('./routes/referenzen');
@@ -16,7 +16,7 @@ connectDb();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+console.log(process.env.PORT);
 //Routes
 app.use("/api/auth", authRoute);
 app.use('/api/berufsstationen', berufsstationenRoute);
@@ -38,6 +38,6 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(errorHandler);
 
-app.listen(port || 8020, ()=>{
+app.listen(port, ()=>{
     console.log(`Server is running on port ${port}`);
 })
