@@ -11,13 +11,13 @@ export const links = [
     },
     {
         id:3,
-        name:"Referenzen",
-        title:"Referenzen",  
+        name:"Projekte",
+        title:"Projekte",  
     },
     {
         id:4,
-        name:"Sprachen",
-        title:"Sprachen",  
+        name:"Skills",
+        title:"Skills",  
     },
     {
         id:5,
