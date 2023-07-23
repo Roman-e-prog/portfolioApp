@@ -24,7 +24,7 @@ const Referenzen = () => {
     <div className='referenzen-container'>
       {windowWidth <=420 ? <MobileNavbar/> : <Navbar/>}
       <div className="referenzen-a-title">
-        <h1>Referenzen</h1>
+        <h1>Meine Projekte</h1>
       </div>
       <div className="referenzen">
         {allReferenzen.length ? allReferenzen.map((item)=>(
