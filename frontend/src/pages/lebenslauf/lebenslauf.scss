@@ -28,11 +28,15 @@
     align-items: center;
     color:map-get($light-colors, primary);
     margin-right:10px;
+    @include tablet{
+        width:30%;
+    }
     @include mobile{
         display:none;
     }
 }
 .station-wrapper{
+    width:70%;
     display:flex;
     flex-direction: column;
     padding-left:10px;
@@ -40,14 +44,21 @@
     border-left: 1px solid map-get($light-colors, primary);
     word-wrap: break-word;
     white-space:pre-wrap;
+    @include tablet{
+        width:60%;
+        padding-left:5px;
+    }
 }
-.station{
-    font-weight:bold;
+.station-headline{
+    font-weight:600;
     margin-bottom: 10px;
     color:map-get($light-colors, primary);
+    min-width: 0;
+    @include tablet{
+        font-weight: 500;
+    }
     @include mobile{
         font-size:13px;
-        font-weight:400;
     }
 }
 .station-beschreibung{

@@ -21,7 +21,7 @@ const Lebenslauf = () => {
   }, []);
   return (
     <div className="lebenslauf-container">
-      {windowWidth <=420 ? <MobileNavbar/> : <Navbar/>}
+      {windowWidth <= 700 ? <MobileNavbar/> : <Navbar/>}
       <div className="lebenslauf-title">
         <h1>Lebenslauf</h1>
       </div>
@@ -33,7 +33,7 @@ const Lebenslauf = () => {
               <span> - </span>
               <span>{item.close}</span></div>
              <div className="station-wrapper">
-              <div className="station">{item.textBold}</div>
+              <div className="station-headline">{item.textBold}</div>
               <div className="station-beschreibung">{item.textNormal}</div>
              </div>
              

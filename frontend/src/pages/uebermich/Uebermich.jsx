@@ -21,7 +21,7 @@ const Uebermich = () => {
   }, []);
   return (
     <div id='ueberMich-ausgabe-container'>
-      {windowWidth <=420 ? <MobileNavbar/> : <Navbar/>}
+      {windowWidth <=700 ? <MobileNavbar/> : <Navbar/>}
       <div className="ueberMich-a-contentWrapper">
         <div id="ueberMich-b-contentWrapper">
           <div className="imageWrapper">

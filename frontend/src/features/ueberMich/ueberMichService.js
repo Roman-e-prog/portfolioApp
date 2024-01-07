@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL = `${window.location.origin}/api/ueberMich/`;
+const API_URL = 'http://localhost:5000/api/ueberMich/';
 
 
 const createUeberMich = async (ueberMichData, token)=>{

@@ -15,7 +15,7 @@ const Home = () => {
       }, []);
   return (
     <div className='homepage'>
-      {windowWidth <= 420 ? <MobileNavbar/>: <Navbar/> }
+      {windowWidth <= 700 ? <MobileNavbar/>: <Navbar/> }
       <div className="contentWrapper">
           <Bild/>
           <Titel/>

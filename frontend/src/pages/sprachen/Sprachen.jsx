@@ -63,7 +63,7 @@ const Sprachen = () => {
   }, []);
   return (
     <div className='sprachen-container'>
-      {windowWidth <=420 ? <MobileNavbar/> : <Navbar/>}
+      {windowWidth <=700 ? <MobileNavbar/> : <Navbar/>}
       <div className="sprachen-sub-container">
         <div className="sprachen-title">
           <h2>Meine Fähigkeiten im Überblick</h2>

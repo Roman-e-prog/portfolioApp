@@ -45,7 +45,7 @@ const publicKey = process.env.REACT_APP_EMAIL_PUBLIC_KEY;
   }, []);
   return (
     <div className='kontakt-container'>
-      {windowWidth <=420 ? <MobileNavbar/> : <Navbar/>}
+      {windowWidth <= 700 ? <MobileNavbar/> : <Navbar/>}
       <div className="kontakt-title">
         <h1>Ich freue mich auf ein Gespräch mit Ihnen</h1>
       </div>

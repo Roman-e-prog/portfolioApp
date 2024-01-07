@@ -22,7 +22,7 @@ const Referenzen = () => {
   }, []);
   return (
     <div className='referenzen-container'>
-      {windowWidth <=420 ? <MobileNavbar/> : <Navbar/>}
+      {windowWidth <=700 ? <MobileNavbar/> : <Navbar/>}
       <div className="referenzen-a-title">
         <h1>Meine Projekte</h1>
       </div>

@@ -11,8 +11,11 @@
     display:flex;
     align-items: center;
 
-    & h2{
+    & .contactData-headline{
         color:map-get($light-colors, primary);
+        @include tablet{
+            font-size: 20px;
+        }
     }
 }
 .kontaktData{
@@ -24,5 +27,8 @@
     & li{
         margin-top: 10px;
         color:map-get($light-colors, primary);
+    }
+    & .contactData-email{
+        word-wrap: break-word;
     }
 }
