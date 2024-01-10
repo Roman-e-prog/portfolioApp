@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/berufsstationen/';
+const API_URL = 'https://romanarminrostockportfolioapp-api.onrender.com/api/berufsstationen/';
 
 const createBerufsstationen = async (berufsstationenData, token)=>{
     const config ={
