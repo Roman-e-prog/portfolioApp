@@ -5,11 +5,13 @@ import Navbar from '../../components/navbar/Navbar';
 import { useDispatch, useSelector } from 'react-redux';
 import {AiOutlineStar} from 'react-icons/ai';
 import { createSprachen, getAllSprachen, updateSprachen } from '../../features/sprachen/sprachenSlice';
+import Spinner from '../../components/spinner/Spinner';
 const Sprachen = () => {
   const dispatch = useDispatch();
   const user = useSelector(state=>state.auth.user);
   //output
   const allSprachen = useSelector((state)=>state.sprachen.allSprachen);
+  const isLoading = useSelector((state)=>state.sprachen.isLoading);
   useEffect(()=>{
     dispatch(getAllSprachen())
   },[dispatch])
@@ -61,6 +63,9 @@ const Sprachen = () => {
       window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+  if(isLoading){
+    return <Spinner/>
+  }
   return (
     <div className='sprachen-container'>
       {windowWidth <=700 ? <MobileNavbar/> : <Navbar/>}

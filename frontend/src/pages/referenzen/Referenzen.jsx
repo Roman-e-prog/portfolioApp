@@ -5,9 +5,11 @@ import Navbar from '../../components/navbar/Navbar';
 import { useDispatch, useSelector } from 'react-redux';
 import {getAllReferenzen} from '../../features/referenzen/referenzenSlice';
 import { mern_stack_ntv, webshop_typescript_mern } from '../../data';
+import Spinner from '../../components/spinner/Spinner';
 const Referenzen = () => {
   const dispatch = useDispatch();
   const allReferenzen = useSelector((state)=>state.referenzen.allReferenzen);
+  const isLoading = useSelector((state)=>state.referenzen.isLoading);
 
   useEffect(()=>{
     dispatch(getAllReferenzen());
@@ -20,6 +22,9 @@ const Referenzen = () => {
       window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+  if(isLoading){
+    return <Spinner/>
+  }
   return (
     <div className='referenzen-container'>
       {windowWidth <=700 ? <MobileNavbar/> : <Navbar/>}

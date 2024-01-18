@@ -5,9 +5,11 @@ import Navbar from '../../components/navbar/Navbar'
 import {useDispatch, useSelector} from 'react-redux';
 import {getAllUeberMich} from '../../features/ueberMich/ueberMichSlice';
 import KontaktData from '../../components/kontaktData/KontaktData';
+import Spinner from '../../components/spinner/Spinner';
 const Uebermich = () => {
   const dispatch = useDispatch();
   const ueberMich = useSelector((state)=>state.ueberMich.allUeberMich);
+  const isLoading = useSelector((state)=>state.ueberMich.isLoading);
   useEffect(()=>{
     dispatch(getAllUeberMich())
   },[dispatch])
@@ -19,6 +21,9 @@ const Uebermich = () => {
       window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+  if(isLoading){
+    return <Spinner/>
+  }
   return (
     <div id='ueberMich-ausgabe-container'>
       {windowWidth <=700 ? <MobileNavbar/> : <Navbar/>}

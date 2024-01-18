@@ -4,9 +4,11 @@ import MobileNavbar from '../../components/mobileNavbar/MobileNavbar';
 import Navbar from '../../components/navbar/Navbar';
 import {useDispatch, useSelector} from 'react-redux';
 import { getAllBerufsstationen } from '../../features/berufsstationen/berufsstationenSlice';
+import Spinner from '../../components/spinner/Spinner';
 const Lebenslauf = () => {
   const dispatch = useDispatch();
   const allBerufsstationen = useSelector((state)=>state.berufsstationen.allBerufsstationen);
+  const isLoading = useSelector((state)=>state.berufsstationen.isLoading);
 
   useEffect(()=>{
     dispatch(getAllBerufsstationen());
@@ -19,6 +21,9 @@ const Lebenslauf = () => {
       window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+  if(isLoading){
+    return <Spinner/>
+  }
   return (
     <div className="lebenslauf-container">
       {windowWidth <= 700 ? <MobileNavbar/> : <Navbar/>}
