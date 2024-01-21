@@ -21,6 +21,7 @@ const Lebenslauf = () => {
       window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+  const sortedBerufsstationen = allBerufsstationen.sort((a,b)=>a.createdAt > b.createdAt ? 1 : -1);
   if(isLoading){
     return <Spinner/>
   }
@@ -31,7 +32,7 @@ const Lebenslauf = () => {
         <h1>Lebenslauf</h1>
       </div>
         <div className="timeline">
-          {allBerufsstationen.length ? allBerufsstationen.map((item)=>(
+          {sortedBerufsstationen.length ? sortedBerufsstationen.map((item)=>(
             <div className="lebenslauf-fieldWrapper" key={item._id}>
              <div className="date">
               <span>{item.entry}</span>
