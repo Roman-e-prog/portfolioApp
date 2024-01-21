@@ -21,7 +21,8 @@ const Lebenslauf = () => {
       window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  const sortedBerufsstationen = allBerufsstationen.sort((a,b)=>a.createdAt > b.createdAt ? 1 : -1);
+  const copiedBerufsstationen = [...allBerufsstationen];
+  const sortedBerufsstationen = copiedBerufsstationen.sort((a,b)=>a.createdAt > b.createdAt ? 1 : -1);
   if(isLoading){
     return <Spinner/>
   }
